@@ -1,10 +1,8 @@
 
 
 .size{
-   
     background-color: rgb(255, 255, 255);
     text-align: center;
-
     border: 1px solid  #CCCCCC;
     color: #CCCCCC;
     padding: 10px 20px;
@@ -43,34 +41,10 @@ border:1px solid #222222;
     transition: 0.2s;
 }
 
-input{
-    border:1px solid #ccc;
-    font-weight: bold;
-    height: 33px;
-    text-align: center;
-    width: 30px;
-}
-.cart{
-    
-    background: #ffffff;
-    color: #000000;
-    font-size: 15px;
-    margin-left:20px;
-    border: 1px solid;
-
-}
-.cart:hover{
-    color:#CCCCCC;
-}
-
 .menu{
     background:#CCCCCC;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-  }
   .dropdown {
     position: relative;
     display: inline-block;
@@ -90,8 +64,6 @@ input{
     display: block;
   }
 
-  
-  
 .shopping-cart-items img{
    width: 65px;
    height: 110px;
@@ -100,7 +72,6 @@ input{
 }
 .shopping-cart-items{
     list-style: none;
-    
 }
 
   
