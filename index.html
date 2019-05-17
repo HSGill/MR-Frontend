@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Product Details Page Design</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--Menu Shopping Cart -->
+    <nav class=" menu navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link dropdown" href="#">My Cart
+                        <div id="shopping_cart" class="dropdown-content">
+
+                            <div class="shopping-cart-items  ">
+                                <img src="images/classic-tee.jpg" alt="item1" />
+                                <h6 class="item-name">Classic Tee</h6>
+                                <p class="item-price">1 X $75</p>
+                                <p class="item-quantity"></p>
+                                <p class="item-size">Size:S</p>
+                            </div>
+
+                            <!--      <p >Size:<span id="item-size"></span></p>  -->
+                        </div> </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <!-- End Shopping Cart-->
+
+    <!--Product Details Body-->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-5">
+                <img src="images/classic-tee.jpg" class="d-block w-100" alt="classic-tee">
+            </div>
+            <div class="col-md-7">
+                <h2>Classic Tee </h2>
+
+                <p class="price"> $75.00</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed tempor and vitality, so that the labor and sorrow,
+                    some important things to do eiusmod.</p>
+                <p>Size<span style="color : red">*</span> <span id="size">&nbsp;</span></p>
+                <div>
+                    <div id="selectedSize" class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+
+                        <div class=" btn-group mr-2 active" role="group" aria-label="Third group">
+                            <button type="button" value="S" name="tshirt" class="size">S</button>
+                        </div>
+                        <div class="btn-group  mr-2" role="group" aria-label="Third group">
+                            <button type="button" value="M" name="tshirt" class=" size ">M</button>
+                        </div>
+                        <div class="btn-group  mr-2" role="group" aria-label="Third group">
+                            <button type="button" value="L" name="tshirt" class=" size  ">L</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="  my-cart-btn  " data-id="1" data-name="product 1" data-summary="summary 1"
+                    data-price="75" data-quantity="1" data-image="images/classic-tee.jpg">ADD TO CART</button>
+
+            </div>
+        </div>
+        <!--Product Details Ends-->
+
+        <script>
+
+            //Add to Cart functionality
+            $(document).ready(function () {
+                $('.my-cart-btn').click(function (event) {
+                    console.log("working");
+                    console.log($('#selectedSize').val());
+
+                    //  $('.shopping-cart-items').append(' <img src="images/classic-tee.jpg" alt="item1" /><h6 class="item-name">Classic Tee</h6><p class="item-price">1 X $75</p><p class="item-quantity"></p><p class="item-size">Size:S</p> ');
+                });
+            });
+
+            $(document).ready(function () {
+
+                $('.btn-toolbar .btn-group').click(function (event) {
+                    console.log($(this).find('button').val());
+                    var val = $(this).find('button').val();
+                    $($('#size').html(val)).html(val);
+
+                })
+            });
+        </script>
+</body>
+
+</html>
